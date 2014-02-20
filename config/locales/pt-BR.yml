@@ -1,0 +1,5 @@
+pt-BR:
+  devise:
+    safeguard_form_title: Por favor informe a senha do seu token.
+    safeguard_token_button: Enviar senha 
+    safeguard_token: Token
