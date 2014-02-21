@@ -29,6 +29,7 @@ describe "Safeguard Authenticatable", :type => :request do
       current_path.should == user_verify_safeguard_path
       #page.should have_content('safeguard-devise-form')
 
+      Devise::DeviseSafeguardController.any_instance.stub(:token_ok?).and_return(true)
       within('#devise_safeguard') do
         fill_in 'safeguard-token', :with => '0000000'
       end

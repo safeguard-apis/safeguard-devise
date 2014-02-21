@@ -8,15 +8,6 @@ class Devise::DeviseSafeguardController < DeviseController
   end
 
   def POST_verify_safeguard
-   # token = Authy::API.verify({
-   #   :id => @resource.authy_id,
-   #   :token => params[:token],
-   #   :force => true
-   # })
-  
-    token = nil
-
-    #if token.ok?
     if token_ok?
       @resource.update_attribute(:last_sign_in_with_safeguard, DateTime.now)
 
@@ -35,7 +26,11 @@ class Devise::DeviseSafeguardController < DeviseController
   end
 
   def token_ok?
-    true 
+    resp = Safeguard::API.is_valid?({
+      :email => @resource.email,
+      :token => params[:safeguard_token]
+    })
+    resp
   end
 
 

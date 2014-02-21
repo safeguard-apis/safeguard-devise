@@ -1,7 +1,7 @@
 require 'active_support/concern'
 require 'active_support/core_ext/integer/time'
 require 'devise'
-
+require 'safeguard-api'
 module Devise
 
 end

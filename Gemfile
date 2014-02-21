@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 gem "devise"
-#gem 'authy'
+gem 'safeguard-api'
 
 group :development do
   gem "rspec"

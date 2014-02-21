@@ -17,13 +17,13 @@ module DeviseSafeguard
       end
 
       def require_token?
-       return true
+        return false if !signed_in?(resource_name)
+        return false if !warden.session(resource_name)[:with_safeguard_authentication]
+        return true
       end
 
       def is_safeguard_token_needed?
-        if signed_in?(resource_name) &&
-           warden.session(resource_name)[:with_safeguard_authentication] &&
-           require_token?
+        if require_token?
           # login with 2fa
           id = warden.session(resource_name)[:id]
 

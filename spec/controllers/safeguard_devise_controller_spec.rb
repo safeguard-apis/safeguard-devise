@@ -33,6 +33,7 @@ describe Devise::DeviseSafeguardController do
       request.session["user_id"] = @user.id
       request.session["user_password_checked"] = true
 
+      Devise::DeviseSafeguardController.any_instance.stub(:token_ok?).and_return(true)
       post :POST_verify_safeguard, :token => '0000000'
       @user.reload
       @user.last_sign_in_with_safeguard.should_not be_nil
