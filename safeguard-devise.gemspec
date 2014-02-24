@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.require_paths = ["lib"]
-  s.authors = ["Vizir"]
+  s.authors = ["diegonakamashi"]
   s.date = "2014-02-24"
   s.description = "Safeguard Devise module"
   s.email = "diegonakamashi@gmail.com"
@@ -27,11 +27,13 @@ Gem::Specification.new do |s|
     "Rakefile",
     "VERSION",
     "Vagrantfile",
+    "app/assets/stylesheets/devise_safeguard.css",
+    "app/assets/stylesheets/devise_safeguard.sass",
     "app/controllers/devise/devise_safeguard_controller.rb",
     "app/views/devise/verify_safeguard.html.erb",
     "app/views/devise/verify_safeguard.html.haml",
-    "config/locales/pt-BR.yml",
     "config/locales/en.yml",
+    "config/locales/pt-BR.yml",
     "lib/devise-safeguard/controllers/helpers.rb",
     "lib/devise-safeguard/hooks/safeguard_authenticatable.rb",
     "lib/devise-safeguard/models/safeguard_authenticatable.rb",
@@ -129,6 +131,7 @@ Gem::Specification.new do |s|
     "puppet/modules/redis/templates/redis.rhel.conf.erb",
     "puppet/modules/redis/tests/init.pp",
     "puppet/upgrade-puppet.sh",
+    "safeguard-devise-0.0.2.gem",
     "safeguard-devise.gemspec",
     "spec/controllers/safeguard_devise_controller_spec.rb",
     "spec/devise/safeguard_authenticatable_spec.rb",
@@ -142,6 +145,7 @@ Gem::Specification.new do |s|
     "spec/safeguard-devise-test-app/app/assets/images/.keep",
     "spec/safeguard-devise-test-app/app/assets/javascripts/application.js",
     "spec/safeguard-devise-test-app/app/assets/stylesheets/application.css",
+    "spec/safeguard-devise-test-app/app/assets/stylesheets/devise_safeguard.css",
     "spec/safeguard-devise-test-app/app/controllers/application_controller.rb",
     "spec/safeguard-devise-test-app/app/controllers/concerns/.keep",
     "spec/safeguard-devise-test-app/app/controllers/home_controller.rb",
@@ -174,6 +178,7 @@ Gem::Specification.new do |s|
     "spec/safeguard-devise-test-app/config/initializers/session_store.rb",
     "spec/safeguard-devise-test-app/config/initializers/wrap_parameters.rb",
     "spec/safeguard-devise-test-app/config/locales/devise.en.yml",
+    "spec/safeguard-devise-test-app/config/locales/devise.safeguard.en.yml",
     "spec/safeguard-devise-test-app/config/locales/devise.safeguard.pt-BR.yml",
     "spec/safeguard-devise-test-app/config/locales/en.yml",
     "spec/safeguard-devise-test-app/config/routes.rb",
@@ -207,7 +212,7 @@ Gem::Specification.new do |s|
   s.homepage = "http://github.com/diegonakamashi/safeguard-devise"
   s.licenses = ["MIT"]
   s.rubygems_version = "2.2.2"
-  s.summary = "safeguard devise module"
+  s.summary = "Safeguard devise module"
 
   if s.respond_to? :specification_version then
     s.specification_version = 4
