@@ -11,13 +11,14 @@ module DeviseSafeguard
 
       def add_configs
         inject_into_file "config/initializers/devise.rb", "\n" +
-        "  # ==> Devise Authy Authentication Extension\n" +
+        "  # ==> Devise Safeguard Authentication Extension\n" +
         "  # How long should the user's device be remembered for.\n" +
         "  # config.safeguard_remember_device = 1.month\n\n", :before => /^end[\r\n]*$/
       end
 
       def copy_locale
         copy_file "../../../config/locales/pt-BR.yml", "config/locales/devise.safeguard.pt-BR.yml"
+        copy_file "../../../config/locales/en.yml", "config/locales/devise.safeguard.en.yml"
       end
 
       def copy_views
@@ -29,6 +30,11 @@ module DeviseSafeguard
       end
 
       def copy_assets
+        if options.sass?
+          copy_file '../../../app/assets/stylesheets/devise_safeguard.sass', 'app/assets/stylesheets/devise_safeguard.sass'
+        else
+          copy_file '../../../app/assets/stylesheets/devise_safeguard.css', 'app/assets/stylesheets/devise_safeguard.css'
+        end
       end
 
       def inject_assets_in_layout

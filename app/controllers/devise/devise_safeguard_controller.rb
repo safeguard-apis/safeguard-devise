@@ -1,7 +1,7 @@
 class Devise::DeviseSafeguardController < DeviseController
   include Devise::Controllers::Helpers
-  
-  before_filter :find_resource_and_require_password_checked 
+
+  before_filter :find_resource_and_require_password_checked
 
   def GET_verify_safeguard
     render 'verify_safeguard'

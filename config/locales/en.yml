@@ -1,0 +1,5 @@
+en:
+  devise:
+    safeguard_form_title: Hardware Token password
+    safeguard_token_button: Send password 
+    safeguard_token: Token

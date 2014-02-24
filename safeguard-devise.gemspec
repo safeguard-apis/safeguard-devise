@@ -6,20 +6,24 @@
 
 Gem::Specification.new do |s|
   s.name = "safeguard-devise"
-  s.version = "0.0.2"
+  s.version = "0.0.3"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.require_paths = ["lib"]
-  s.authors = ["vizir"]
-  s.date = "2014-02-21"
+  s.authors = ["Vizir"]
+  s.date = "2014-02-24"
   s.description = "Safeguard Devise module"
-  s.email = "contato@vizir.com.br"
+  s.email = "diegonakamashi@gmail.com"
+  s.extra_rdoc_files = [
+    "README.md"
+  ]
   s.files = [
     ".vagrant/machines/default/virtualbox/action_provision",
     ".vagrant/machines/default/virtualbox/action_set_name",
     ".vagrant/machines/default/virtualbox/id",
     "Gemfile",
     "Gemfile.lock",
+    "README.md",
     "Rakefile",
     "VERSION",
     "Vagrantfile",
@@ -27,6 +31,7 @@ Gem::Specification.new do |s|
     "app/views/devise/verify_safeguard.html.erb",
     "app/views/devise/verify_safeguard.html.haml",
     "config/locales/pt-BR.yml",
+    "config/locales/en.yml",
     "lib/devise-safeguard/controllers/helpers.rb",
     "lib/devise-safeguard/hooks/safeguard_authenticatable.rb",
     "lib/devise-safeguard/models/safeguard_authenticatable.rb",
@@ -202,7 +207,7 @@ Gem::Specification.new do |s|
   s.homepage = "http://github.com/diegonakamashi/safeguard-devise"
   s.licenses = ["MIT"]
   s.rubygems_version = "2.2.2"
-  s.summary = "one-line summary of your gem"
+  s.summary = "safeguard devise module"
 
   if s.respond_to? :specification_version then
     s.specification_version = 4

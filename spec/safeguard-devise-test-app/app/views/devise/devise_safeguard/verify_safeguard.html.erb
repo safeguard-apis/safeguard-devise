@@ -1,9 +1,9 @@
-<h2 class='safeguard-devise-form'>
-  <%= I18n.t('safeguard_form_title', {:scope => 'devise'}) %>
-</h2>
-<%= form_tag([resource_name, :verify_safeguard], :id => 'devise_safeguard', :class => 'safeguard-form', :method => :post) do %>
-  <%= hidden_field_tag(:"#{resource_name}_id", @resource.email) %>
-  <%= label_tag :safeguard_token %>
-  <%= text_field_tag :safeguard_token, "", :autocomplete => :off, :id => 'safeguard-token' %>
-  <%= submit_tag I18n.t('safeguard_token_button', {:scope => 'devise'}), :class => 'button' %>
-<% end %>
+<%= stylesheet_link_tag "devise_safeguard", :media => "all" %>
+<div id="safeguard-form-token">
+  <%= form_tag([resource_name, :verify_safeguard], :id => 'devise_safeguard', :class => 'safeguard-form', :method => :post) do %>
+    <%= hidden_field_tag(:"#{resource_name}_id", @resource.email) %>
+    <%= label_tag :safeguard_token %>
+    <%= text_field_tag :safeguard_token, "", :autocomplete => :off, :id => 'safeguard-token' %>
+    <%= submit_tag I18n.t('safeguard_token_button', {:scope => 'devise'}), :class => 'button' %>
+  <% end %>
+</div>
