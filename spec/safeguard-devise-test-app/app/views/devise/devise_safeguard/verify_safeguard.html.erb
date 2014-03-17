@@ -1,9 +1,22 @@
 <%= stylesheet_link_tag "devise_safeguard", :media => "all" %>
 <div id="safeguard-form-token">
   <%= form_tag([resource_name, :verify_safeguard], :id => 'devise_safeguard', :class => 'safeguard-form', :method => :post) do %>
+    <div class="devise-logo-safeguard"></div>
     <%= hidden_field_tag(:"#{resource_name}_id", @resource.email) %>
-    <%= label_tag :safeguard_token %>
+    <label>
+      <%= I18n.t('devise.safeguard_form_title') %>
+    </label>
     <%= text_field_tag :safeguard_token, "", :autocomplete => :off, :id => 'safeguard-token' %>
+    <div class="token-types">
+      <div class="normal-token token-type">
+        <%= radio_button 'token', 'type', 'normal', checked: 'checked' %>
+        <%= I18n.t('devise.safeguard_token_normal') %>
+      </div>
+      <div class="smartphone-token token-type">
+        <%= radio_button 'token', 'type', 'smartphone' %>
+        <%= I18n.t('devise.safeguard_token_smartphone') %>
+      </div>
+    </div>
     <%= submit_tag I18n.t('safeguard_token_button', {:scope => 'devise'}), :class => 'button' %>
   <% end %>
 </div>

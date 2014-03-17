@@ -28,7 +28,8 @@ class Devise::DeviseSafeguardController < DeviseController
   def token_ok?
     resp = Safeguard::API.is_valid?({
       :email => @resource.email,
-      :token => params[:safeguard_token]
+      :token => params[:safeguard_token],
+      :token_type => params[:token][:type]
     })
     resp
   end

@@ -256,4 +256,9 @@ Devise.setup do |config|
   # How long should the user's device be remembered for.
   # config.safeguard_remember_device = 1.month
 
+
+  # ==> Devise Safeguard Authentication Extension
+  # How long should the user's device be remembered for.
+  # config.safeguard_remember_device = 1.month
+
 end

@@ -35,6 +35,7 @@ module DeviseSafeguard
         else
           copy_file '../../../app/assets/stylesheets/devise_safeguard.css', 'app/assets/stylesheets/devise_safeguard.css'
         end
+          copy_file '../../../app/assets/images/logo_safeguard.png', 'app/assets/images/devise_logo_safeguard.png'
       end
 
       def inject_assets_in_layout

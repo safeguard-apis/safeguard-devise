@@ -6,7 +6,7 @@
 
 Gem::Specification.new do |s|
   s.name = "safeguard-devise"
-  s.version = "0.0.3"
+  s.version = "0.0.5"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.require_paths = ["lib"]
@@ -27,6 +27,7 @@ Gem::Specification.new do |s|
     "Rakefile",
     "VERSION",
     "Vagrantfile",
+    "app/assets/images/logo_safeguard.png",
     "app/assets/stylesheets/devise_safeguard.css",
     "app/assets/stylesheets/devise_safeguard.sass",
     "app/controllers/devise/devise_safeguard_controller.rb",
@@ -131,7 +132,6 @@ Gem::Specification.new do |s|
     "puppet/modules/redis/templates/redis.rhel.conf.erb",
     "puppet/modules/redis/tests/init.pp",
     "puppet/upgrade-puppet.sh",
-    "safeguard-devise-0.0.2.gem",
     "safeguard-devise.gemspec",
     "spec/controllers/safeguard_devise_controller_spec.rb",
     "spec/devise/safeguard_authenticatable_spec.rb",
