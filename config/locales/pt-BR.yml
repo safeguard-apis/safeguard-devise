@@ -1,7 +1,7 @@
 pt-BR:
   devise:
     safeguard_form_title: Informe a senha do seu token
-    safeguard_token_button: Enviar senha 
+    safeguard_token_button: Validar
     safeguard_token: Token
     safeguard_token_normal: Padrão
     safeguard_token_smartphone: Smartphone

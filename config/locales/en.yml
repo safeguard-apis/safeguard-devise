@@ -1,7 +1,7 @@
 en:
   devise:
     safeguard_form_title: Hardware Token password
-    safeguard_token_button: Send password 
+    safeguard_token_button: Validate
     safeguard_token: Token
     safeguard_token_normal: Default
     safeguard_token_smartphone: Smartphone
