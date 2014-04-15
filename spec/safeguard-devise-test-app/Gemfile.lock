@@ -1,7 +1,7 @@
 PATH
   remote: ../..
   specs:
-    safeguard-devise (0.0.5)
+    safeguard-devise (0.0.6)
       devise
       safeguard-api
 
